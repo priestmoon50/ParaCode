@@ -1,2 +1,2 @@
 # ParaCode
-Teamwork Koorosh &amp; Pezhman.
+Team work Koorosh &amp; Pezhman.
