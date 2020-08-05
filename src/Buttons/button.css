@@ -1,0 +1,24 @@
+.button-big {
+  background-color: cornsilk;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: center;
+  font-size: xx-large;
+  
+}
+.button-card :hover {
+  background-color: yellowgreen;
+  transition: ease-in 0.5s;
+}
+
+.button-description {
+  z-index: -1;
+  opacity: 60%;
+  
+}
+
+.button-link{
+  text-decoration: none;
+}
