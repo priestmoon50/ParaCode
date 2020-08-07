@@ -20,16 +20,14 @@ export default function Login() {
           item
           xs={12}
           sm={8}
-          md={5}
+          md={6}
           xl={4}
           component={Paper}
           elevation={6}
           square
         >
           <div className="card">
-            <Avatar>
-              <LockOutlinedIcon />
-            </Avatar>
+            
             <Typography component="h1" variant="h5">
               Create Your Account
             </Typography>
@@ -81,7 +79,7 @@ export default function Login() {
               <div  className="card-button">
               <Button
              
-                type="submit"
+                
                 fullWidth
                 variant="contained"
                 color="primary"
@@ -92,7 +90,7 @@ export default function Login() {
               <p>already have account ? </p>
               <Grid container>
                 <Grid item xs={12} sm={8} md={12} xl={12} >
-                  <Button type="submit" variant="contained" color="secondary">
+                  <Button  variant="contained" color="secondary">
                     <Link
                       style={{ textDecoration: "none", color: "white" }}
                       to="../Login"

@@ -17,7 +17,7 @@
     font-size: 2.75em;
     font-weight: bold;
     transition: 0.24s 0.2s;
-    color: #f273ba;
+    color: #119da7;
 }
 
 .navbar .menu{
@@ -63,10 +63,14 @@
     background: white;
     position: absolute;
     font-size: 59%;
-    color: #f273ba;
-    transition: 0.7s;
+    color: #119da7;
+    transition: 0.6s;
 }
 
+.navbar .menu li:hover a  {
+    border: 1px solid violet; 
+ 
+}
 .navbar:hover .menu li:nth-child(1){
     transition-delay: 0.02s;
     transform: rotate(85deg);

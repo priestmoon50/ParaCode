@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function About() {
   return (
     <div className="body">
-      <h1>Hello from About</h1>
+      <h1>Put your Mouse on Social Links</h1>
       <div class="navbar">Social 
         <ul class="menu">
           <li><Link to="#" class="fa fa-facebook"> </Link></li>

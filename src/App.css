@@ -1,12 +1,18 @@
 .App {
   text-align: center;
+  background-size: cover;
+  border: 1px rgba(1, 96, 151, 0.7) solid;
+  
 }
 
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.DrawerCard{
+  background: url(./bg.jpg);
+  background-size: contain;
+  opacity: 95%;
+  
+}
+
+
+.MainCard{
+  background-color:  rgba(1, 96, 151, 0.1);
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -12,7 +12,21 @@ import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import "./form.css";
+import axios from "axios";
+
+const LoginApi = (state, onAnswer) => {
+  console.log(state);
+  axios
+    .post("localhost:3000/apiV1/account/login", state)
+    .then((response) => {
+      onAnswer(response.data, true, false);
+    })
+    .catch((error) => onAnswer(error.message, false, true));
+};
+
 export default function Login() {
+  const [state, setState] = useState({ email: "", password: "" });
+
   return (
     <div className="card-main">
       <Grid container component="main">
@@ -22,11 +36,12 @@ export default function Login() {
           item
           xs={12}
           sm={8}
-          md={5}
+          md={6}
           xl={4}
           component={Paper}
           elevation={6}
           square
+         
         >
           <div className="card">
             <Avatar>
@@ -40,7 +55,9 @@ export default function Login() {
                 variant="outlined"
                 margin="normal"
                 required
-                fullWidth
+                fullWidth 
+                value={state.email}
+                onChange={(e) => setState({ ...state, email: e.target.value })}
                 id="Username"
                 label="Username"
                 name="Username"
@@ -52,6 +69,10 @@ export default function Login() {
                 margin="normal"
                 required
                 fullWidth
+                value={state.password}
+                onChange={(e) =>
+                  setState({ ...state, password: e.target.value })
+                }
                 name="password"
                 label="Password"
                 type="password"
@@ -64,38 +85,48 @@ export default function Login() {
               />
               <div className="card-button">
                 <Button
-                  type="submit"
                   fullWidth
                   variant="contained"
                   color="primary"
+                  onClick={() =>
+                    LoginApi(state, (data, status, error) => {
+                      console.log(data, status, error);
+                      if(status){
+                        localStorage.setItem("token" , data.token);
+                        window.location.replace("/")
+                      }else{
+
+                      }
+                    })
+                  }
                 >
                   Login
                 </Button>
               </div>
-              <div  className="card-button">
-              <Grid container>
-                <Grid item xs={7} sm={8} md={6} xl={8}>
-                  <Button type="submit" variant="contained" color="secondary">
-                    <Link 
-                      style={{ textDecoration: "none", color: "white" }}
-                      to="../Register"
-                    >
-                      Forget Password ?
-                    </Link>
-                  </Button>
+              <div className="card-button">
+                <Grid container>
+                  <Grid item xs={7} sm={8} md={6} xl={8}>
+                    <Button variant="contained" color="secondary">
+                      <Link
+                        style={{ textDecoration: "none", color: "white" }}
+                        to="../Register"
+                      >
+                        Forget Password ?
+                      </Link>
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button variant="contained" color="secondary">
+                      <Link
+                        style={{ textDecoration: "none", color: "white" }}
+                        to="../Register"
+                      >
+                        Register
+                      </Link>
+                    </Button>
+                  </Grid>
                 </Grid>
-                <Grid item>
-                  <Button type="submit" variant="contained" color="secondary">
-                    <Link
-                      style={{ textDecoration: "none", color: "white" }}
-                      to="../Register"
-                    >
-                      Register
-                    </Link>
-                  </Button>
-                </Grid>
-              </Grid>
-              <Box mt={5}></Box>
+                <Box mt={5}></Box>
               </div>
             </form>
           </div>
@@ -104,33 +135,3 @@ export default function Login() {
     </div>
   );
 }
-
-// import React from "react";
-// import { useForm } from "react-hook-form";
-
-// export default function Login() {
-//   const { register, handleSubmit, errors } = useForm();
-
-//   const onSubmit = (data) => {
-//     console.log(data);
-//   };
-
-//   return (
-//     <div>
-//       <form onSubmit={handleSubmit(onSubmit)}>
-//         <input type="text" placeholder="username" name="email" ref={register} />
-//         <br />
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           name="password"
-//           ref={register({ required: true, minLength: 8 })}
-//         />
-//         <br />
-//         <input type="submit" />
-
-//         {errors.password && <p>Password must be at least 8 Char.</p>}
-//       </form>
-//     </div>
-//   );
-// }
