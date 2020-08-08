@@ -29,18 +29,10 @@ export default function Login() {
 
   return (
     <div className="card-main">
-       <Grid container direction="row" justify="center" alignItems="baseline">
-       <CssBaseline />
-        
-       <Grid
-          item
-          xs={12}
-          sm={12}
-          md={10}
-          lg={6}
-          xl={4}
+      <Grid container direction="row" justify="center" alignItems="baseline">
+        <CssBaseline />
 
-        >
+        <Grid item xs={12} sm={12} md={10} lg={6} xl={4}>
           <div className="card">
             <Avatar>
               <LockOutlinedIcon />
@@ -53,7 +45,7 @@ export default function Login() {
                 variant="outlined"
                 margin="normal"
                 required
-                fullWidth 
+                fullWidth
                 value={state.email}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
                 id="Username"
@@ -89,11 +81,10 @@ export default function Login() {
                   onClick={() =>
                     LoginApi(state, (data, status, error) => {
                       console.log(data, status, error);
-                      if(status){
-                        localStorage.setItem("token" , data.token);
-                        window.location.replace("/")
-                      }else{
-
+                      if (status) {
+                        localStorage.setItem("token", data.token);
+                        window.location.replace("/");
+                      } else {
                       }
                     })
                   }
