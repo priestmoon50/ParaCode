@@ -1,10 +1,23 @@
 import React from "react";
-
-
+import Grid from "@material-ui/core/Grid";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import "./about.css"
 import { Link } from "react-router-dom";
+
 export default function About() {
   return (
+    <Grid container direction="row" justify="center" alignItems="baseline">
+      <CssBaseline />
+       
+      <Grid
+          item
+          xs={12}
+          sm={12}
+          md={10}
+          lg={6}
+          xl={4}
+
+        >
     <div className="body">
       <h1>Put your Mouse on Social Links</h1>
       <div class="navbar">Social 
@@ -21,5 +34,7 @@ export default function About() {
         </ul>
       </div>
     </div>
+    </Grid>
+    </Grid>
   );
 }

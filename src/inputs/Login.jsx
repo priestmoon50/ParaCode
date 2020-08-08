@@ -6,7 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { Link } from "react-router-dom";
-import Paper from "@material-ui/core/Paper";
+
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
@@ -29,19 +29,17 @@ export default function Login() {
 
   return (
     <div className="card-main">
-      <Grid container component="main">
-        <CssBaseline />
-        <Grid item xs={false} sm={2} md={4} />
-        <Grid
+       <Grid container direction="row" justify="center" alignItems="baseline">
+       <CssBaseline />
+        
+       <Grid
           item
           xs={12}
-          sm={8}
-          md={6}
+          sm={12}
+          md={10}
+          lg={6}
           xl={4}
-          component={Paper}
-          elevation={6}
-          square
-         
+
         >
           <div className="card">
             <Avatar>

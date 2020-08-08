@@ -1,13 +1,13 @@
 import React from "react";
-import bg from "./bg.jpg";
+import bg from "./bg.png";
 
 export default function Termin() {
   return (
-    <div>
+    <div style={{color: "white" , textAlign: "center"}}>
       <h1>
         WELCOME TO <br /> <img width="400" src={bg} alt="world Backgroudn" />
       </h1>
-      <p>
+      <p  >
         We and our partners store and/or access information on a device, such as
         cookies and process personal data, such as unique identifiers and
         standard information sent by a device for personalised ads and content,

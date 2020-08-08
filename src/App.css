@@ -2,17 +2,16 @@
   text-align: center;
   background-size: cover;
   border: 1px rgba(1, 96, 151, 0.7) solid;
-  
 }
 
-.DrawerCard{
-  background: url(./bg.jpg);
-  background-size: contain;
-  opacity: 95%;
-  
+.DrawerCard {
+  /* background: url(./bg.jpg);
+  opacity: 220%;
+  background-size: cover;
+  background-position: -20vmin; */
+background: transparent;
 }
 
-
-.MainCard{
-  background-color:  rgba(1, 96, 151, 0.1);
+.MainCard {
+  background-color: rgba(1, 96, 151, 0.1);
 }

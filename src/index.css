@@ -1,7 +1,10 @@
 
 body {
-  background-image: url(./Bg.png);
-  padding: 10%;
+  background-image: url(./Main.jpg);
+  background-size: cover;
+  
+  
+  /* padding: 10%; */
   margin: 0;
   overflow-x: hidden;
 
