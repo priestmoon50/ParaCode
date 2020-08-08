@@ -96,7 +96,7 @@ export default function Login() {
                 fullWidth
                 name="password"
                 label="Repeat Password"
-                type="RepeatPassword"
+                type="password"
                 id="RepeatPassword"
                 autoComplete="current-password"
               />
