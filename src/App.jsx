@@ -266,6 +266,7 @@ function App() {
           marginTop: "5%",
           flexGrow: 4,
           padding: "5%",
+          textAlign: "center",
         }}
       >
         <Main />

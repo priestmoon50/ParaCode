@@ -72,7 +72,7 @@ export default function Login() {
                 label="Email addres"
                 name="email"
                 autoComplete="email"
-                autoFocus
+                
               />
               <div className="card-button">
                 <Button fullWidth variant="contained" color="primary">
