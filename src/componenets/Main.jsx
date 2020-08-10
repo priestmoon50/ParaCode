@@ -15,7 +15,6 @@ const Main = () => (
     <Route path="/Contact" component={Contact} />
     <Route path="/About" component={About} />
     <Route path="/Login" component={Login} />
-   
     <Route path="/Register" component={Register} />
     <Route path="/Gallery" component={Gallery} />
     <Route path="/ChatZone" component={ChatZone} />
